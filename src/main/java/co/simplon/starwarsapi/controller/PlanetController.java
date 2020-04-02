@@ -22,7 +22,7 @@ public class PlanetController {
     public List<Planet> getPlanetList() {
         return planetRepository.findAll();
     }
-
+//commentaire
     @GetMapping("/{planetId}")
     public ResponseEntity<Planet> getPlanet(@PathVariable Long planetId) {
         Optional<Planet> planet = planetRepository.findById(planetId);
