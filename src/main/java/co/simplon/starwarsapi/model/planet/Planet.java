@@ -9,8 +9,13 @@ import java.util.Set;
 @Table(name = "planets")
 public class Planet {
 
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(allocationSize = 1, name = "planet_id_seq")
+    @GeneratedValue(generator = "planet_id_seq")
     private Long id;
 
     @Column(name = "planet_name")

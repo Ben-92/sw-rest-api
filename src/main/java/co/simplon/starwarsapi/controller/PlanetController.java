@@ -29,6 +29,7 @@ public class PlanetController {
 
         if (planet.isPresent()) {
             return ResponseEntity.ok(planet.get());
+//            return ResponseEntity.badRequest().build();
         }
         return ResponseEntity.notFound().build();
     }
